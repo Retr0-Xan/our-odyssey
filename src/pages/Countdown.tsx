@@ -11,7 +11,7 @@ const Countdown = () => {
   });
 
   // Set your target date here (2-year anniversary example)
-  const targetDate = new Date('2026-01-15T00:00:00').getTime();
+  const targetDate = new Date('2026-09-09T00:00:00').getTime();
   const eventTitle = "Our 2-Year Anniversary";
   const eventDescription = "Two years of love, laughter, and endless memories";
 
@@ -35,7 +35,7 @@ const Countdown = () => {
 
   const milestones = [
     {
-      date: 'January 15, 2025',
+      date: 'September 09, 2025',
       title: 'One Year Anniversary',
       description: 'Celebrating our first year together',
       status: 'completed',
@@ -49,7 +49,7 @@ const Countdown = () => {
       icon: Gift
     },
     {
-      date: 'January 15, 2026',
+      date: 'September 09, 2026',
       title: 'Two Year Anniversary',
       description: 'The milestone we\'re counting down to',
       status: 'target',
