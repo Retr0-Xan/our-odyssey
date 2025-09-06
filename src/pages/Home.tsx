@@ -78,7 +78,7 @@ const Home = () => {
             transition={{ delay: 1.8, duration: 0.8 }}
             className="text-2xl md:text-3xl script text-yellow-100 mb-16 leading-relaxed"
           >
-            A digital love story crafted with devotion
+            To my beautiful Princess, my heart's eternal flame.
           </motion.p>
 
           <motion.div

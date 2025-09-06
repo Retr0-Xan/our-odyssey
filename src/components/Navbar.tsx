@@ -2,7 +2,7 @@
 import { useLocation } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Heart, Camera, Calendar, MessageSquare, Clock, Music, MapPin, BookOpen, Sparkles } from 'lucide-react';
+import { Heart, Camera, Calendar, MessageSquare, Clock, Music, BookOpen, Sparkles } from 'lucide-react';
 
 const Navbar = () => {
   const navItems = [
@@ -13,7 +13,6 @@ const Navbar = () => {
     { path: '/countdown', label: 'Countdown', icon: Calendar },
     { path: '/playlist', label: 'Playlist', icon: Music },
     { path: '/quiz', label: 'Quiz', icon: Sparkles },
-    { path: '/map', label: 'Map', icon: MapPin },
     { path: '/messages', label: 'Messages', icon: MessageSquare },
   ];
 
@@ -27,7 +26,6 @@ const Navbar = () => {
     '/countdown': { text: 'text-gray-900', bar: 'bg-white' },
     '/playlist': { text: 'text-gray-900', bar: 'bg-white' },
     '/quiz': { text: 'text-gray-900', bar: 'bg-white' },
-    '/map': { text: 'text-gray-900', bar: 'bg-white' },
     '/messages': { text: 'text-gray-900', bar: 'bg-white' },
   };
   // Default to white text and dark bar if not mapped
