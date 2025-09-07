@@ -4,7 +4,11 @@ import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Heart, Camera, Calendar, MessageSquare, Clock, Music, BookOpen, Sparkles } from 'lucide-react';
 
-const Navbar = () => {
+interface NavbarProps {
+  navbarTextColor?: string;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ navbarTextColor }) => {
   const navItems = [
     { path: '/', label: 'Home', icon: Heart },
     { path: '/timeline', label: 'Timeline', icon: Clock },
@@ -28,8 +32,13 @@ const Navbar = () => {
     '/quiz': { text: 'text-gray-900', bar: 'bg-white' },
     '/messages': { text: 'text-gray-900', bar: 'bg-white' },
   };
-  // Default to white text and dark bar if not mapped
-  const { text: textColorClass, bar: barColorClass } = routeColors[location.pathname] || { text: 'text-white', bar: 'bg-gray-800' };
+  // Use dynamic color for Home page if prop is provided
+  let textColorClass = routeColors[location.pathname]?.text || 'text-white';
+  let barColorClass = routeColors[location.pathname]?.bar || 'bg-gray-800';
+  if (location.pathname === '/' && navbarTextColor) {
+    textColorClass = navbarTextColor;
+    barColorClass = navbarTextColor === 'text-white' ? 'bg-gray-800' : 'bg-white';
+  }
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
