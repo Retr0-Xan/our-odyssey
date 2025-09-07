@@ -3,62 +3,78 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Heart, ArrowLeft, ArrowRight } from 'lucide-react';
 
 const Gallery = () => {
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
-  
-  const images = [
+  // Album structure: cover, title, description, media[]
+  const albums = [
     {
       id: 1,
-      url: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-      title: 'First Date',
-      description: 'The beginning of our beautiful story',
-      location: 'Downtown Café',
+      title: 'First Adventures',
+      description: 'Our earliest memories together.',
+      cover: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
+      media: [
+        {
+          type: 'image',
+          url: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
+          title: 'First Date',
+          description: 'The beginning of our beautiful story',
+        },
+        {
+          type: 'image',
+          url: 'https://images.pexels.com/photos/1816654/pexels-photo-1816654.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
+          title: 'Beach Sunset',
+          description: 'Golden hour with my golden girl',
+        },
+        {
+          type: 'video',
+          url: 'https://www.w3schools.com/html/mov_bbb.mp4',
+          title: 'Our First Video',
+          description: 'A fun day at the park',
+        },
+      ],
     },
     {
       id: 2,
-      url: 'https://images.pexels.com/photos/1816654/pexels-photo-1816654.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-      title: 'Beach Sunset',
-      description: 'Golden hour with my golden girl',
-      location: 'Malibu Beach',
-    },
-    {
-      id: 3,
-      url: 'https://images.pexels.com/photos/1024988/pexels-photo-1024988.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-      title: 'City Lights',
-      description: 'Dancing under the stars',
-      location: 'Rooftop Terrace',
-    },
-    {
-      id: 4,
-      url: 'https://images.pexels.com/photos/1024992/pexels-photo-1024992.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-      title: 'Cozy Evening',
-      description: 'Home is wherever you are',
-      location: 'Our Place',
-    },
-    {
-      id: 5,
-      url: 'https://images.pexels.com/photos/1819650/pexels-photo-1819650.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-      title: 'Morning Coffee',
-      description: 'Perfect mornings together',
-      location: 'Kitchen Counter',
-    },
-    {
-      id: 6,
-      url: 'https://images.pexels.com/photos/1024989/pexels-photo-1024989.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-      title: 'Adventure',
-      description: 'Exploring the world hand in hand',
-      location: 'Mountain Trail',
+      title: 'Cozy Moments',
+      description: 'Home is wherever you are.',
+      cover: 'https://images.pexels.com/photos/1024992/pexels-photo-1024992.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
+      media: [
+        {
+          type: 'image',
+          url: 'https://images.pexels.com/photos/1024992/pexels-photo-1024992.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
+          title: 'Cozy Evening',
+          description: 'Home is wherever you are',
+        },
+        {
+          type: 'image',
+          url: 'https://images.pexels.com/photos/1024988/pexels-photo-1024988.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
+          title: 'City Lights',
+          description: 'Dancing under the stars',
+        },
+      ],
     },
   ];
 
-  const nextImage = () => {
-    if (selectedImage !== null) {
-      setSelectedImage((selectedImage + 1) % images.length);
+  // Track selected album and media index
+  const [selectedAlbum, setSelectedAlbum] = useState<number | null>(null);
+  const [selectedMedia, setSelectedMedia] = useState<number>(0);
+
+  const openAlbum = (albumIdx: number) => {
+    setSelectedAlbum(albumIdx);
+    setSelectedMedia(0);
+  };
+  const closeAlbum = () => {
+    setSelectedAlbum(null);
+    setSelectedMedia(0);
+  };
+  const nextMedia = () => {
+    if (selectedAlbum !== null) {
+      const mediaArr = albums[selectedAlbum].media;
+      setSelectedMedia((selectedMedia + 1) % mediaArr.length);
     }
   };
-
-  const prevImage = () => {
-    if (selectedImage !== null) {
-      setSelectedImage(selectedImage === 0 ? images.length - 1 : selectedImage - 1);
+  const prevMedia = () => {
+    if (selectedAlbum !== null) {
+      const mediaArr = albums[selectedAlbum].media;
+      setSelectedMedia(selectedMedia === 0 ? mediaArr.length - 1 : selectedMedia - 1);
     }
   };
 
@@ -88,9 +104,9 @@ const Gallery = () => {
         </motion.div>
       </div>
 
-      {/* Gallery Grid */}
+      {/* Albums Grid */}
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           initial="hidden"
           animate="visible"
@@ -104,30 +120,29 @@ const Gallery = () => {
             }
           }}
         >
-          {images.map((image, index) => (
+          {albums.map((album, idx) => (
             <motion.div
-              key={image.id}
+              key={album.id}
               variants={{
                 hidden: { y: 60, opacity: 0 },
                 visible: { y: 0, opacity: 1 }
               }}
               whileHover={{ y: -10 }}
               className="group cursor-pointer sophisticated-hover"
-              onClick={() => setSelectedImage(index)}
+              onClick={() => openAlbum(idx)}
             >
               <div className="relative overflow-hidden bg-white rounded-lg shadow-lg">
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
-                    src={image.url}
-                    alt={image.title}
+                    src={album.cover}
+                    alt={album.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                   <div className="absolute bottom-6 left-6 right-6 text-white">
-                    <h3 className="text-2xl serif mb-2">{image.title}</h3>
-                    <p className="text-sm opacity-90 mb-1">{image.description}</p>
-                    <p className="text-xs opacity-70 uppercase tracking-wider">{image.location}</p>
+                    <h3 className="text-2xl serif mb-2">{album.title}</h3>
+                    <p className="text-sm opacity-90 mb-1">{album.description}</p>
                   </div>
                 </div>
                 <motion.div
@@ -143,15 +158,15 @@ const Gallery = () => {
         </motion.div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Album Modal */}
       <AnimatePresence>
-        {selectedImage !== null && (
+        {selectedAlbum !== null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm"
-            onClick={() => setSelectedImage(null)}
+            onClick={closeAlbum}
           >
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
@@ -163,45 +178,51 @@ const Gallery = () => {
             >
               {/* Navigation */}
               <button
-                onClick={prevImage}
+                onClick={prevMedia}
                 className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors text-white"
               >
                 <ArrowLeft size={24} />
               </button>
-              
               <button
-                onClick={nextImage}
+                onClick={nextMedia}
                 className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors text-white"
               >
                 <ArrowRight size={24} />
               </button>
-
               {/* Close button */}
               <button
-                onClick={() => setSelectedImage(null)}
+                onClick={closeAlbum}
                 className="absolute top-4 right-4 z-10 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors text-white"
               >
                 <X size={24} />
               </button>
-              
               <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
-                <div className="aspect-[4/5] md:aspect-[16/10]">
-                  <img
-                    src={images[selectedImage].url}
-                    alt={images[selectedImage].title}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="aspect-[4/5] md:aspect-[16/10] flex items-center justify-center">
+                  {albums[selectedAlbum].media[selectedMedia].type === 'image' ? (
+                    <img
+                      src={albums[selectedAlbum].media[selectedMedia].url}
+                      alt={albums[selectedAlbum].media[selectedMedia].title || ''}
+                      className="w-full h-full object-cover"
+                    />
+                  ) : (
+                    <video
+                      src={albums[selectedAlbum].media[selectedMedia].url}
+                      controls
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
                 <div className="p-8">
-                  <h3 className="text-3xl serif text-gray-800 mb-3">
-                    {images[selectedImage].title}
-                  </h3>
-                  <p className="text-lg text-gray-600 mb-2">
-                    {images[selectedImage].description}
-                  </p>
-                  <p className="text-sm text-gray-500 uppercase tracking-wider">
-                    {images[selectedImage].location}
-                  </p>
+                  {albums[selectedAlbum].media[selectedMedia].title && (
+                    <h3 className="text-3xl serif text-gray-800 mb-3">
+                      {albums[selectedAlbum].media[selectedMedia].title}
+                    </h3>
+                  )}
+                  {albums[selectedAlbum].media[selectedMedia].description && (
+                    <p className="text-lg text-gray-600 mb-2">
+                      {albums[selectedAlbum].media[selectedMedia].description}
+                    </p>
+                  )}
                 </div>
               </div>
             </motion.div>
