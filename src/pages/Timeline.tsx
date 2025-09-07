@@ -6,23 +6,23 @@ const Timeline = () => {
   const timelineEvents = [
     {
       id: 1,
-      date: 'January 15, 2024',
+      date: 'March 2024',
       title: 'First Meeting',
-      description: 'The day our eyes first met at the coffee shop downtown. I knew something special was about to begin.',
-      image: 'https://images.pexels.com/photos/302899/pexels-photo-302899.jpeg?auto=compress&cs=tinysrgb&w=800',
-      location: 'Central Perk Café',
+      description: 'Never knew something special was about to begin..(I don\'t remember the exact date I\'m sorry😬)',
+      image: 'src/assets/Fortnite.jpg',
+      location: 'In-game',
       type: 'milestone',
-      details: 'You ordered a vanilla latte with extra foam, and I couldn\'t stop staring at your smile.'
+      details: 'Decided to give this game one last go on the HP. Best decision ever!'
     },
     {
       id: 2,
-      date: 'February 14, 2024',
+      date: 'September 09, 2024',
       title: 'First Date',
-      description: 'Our first official date on Valentine\'s Day. Dinner under the stars and endless conversation.',
-      image: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800',
-      location: 'Moonlight Restaurant',
+      description: 'Our first official date! Also the day we officially became a couple.',
+      image: 'src/assets/first-date.jpg',
+      location: 'Sweet Tooth',
       type: 'romantic',
-      details: 'We talked until the restaurant closed, and even then, we didn\'t want the night to end.'
+      details: 'Never trying those churros again.'
     },
     {
       id: 3,
@@ -122,7 +122,7 @@ const Timeline = () => {
             {timelineEvents.map((event, index) => {
               const Icon = getEventIcon(event.type);
               const isEven = index % 2 === 0;
-              
+
               return (
                 <motion.div
                   key={event.id}
@@ -130,9 +130,8 @@ const Timeline = () => {
                   whileInView={{ opacity: 1, y: 0, x: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className={`relative flex items-center ${
-                    isEven ? 'md:flex-row' : 'md:flex-row-reverse'
-                  } flex-col md:space-x-8`}
+                  className={`relative flex items-center ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'
+                    } flex-col md:space-x-8`}
                 >
                   {/* Timeline dot */}
                   <div className="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-white border-4 border-yellow-600 rounded-full z-10 shadow-lg">
@@ -146,7 +145,7 @@ const Timeline = () => {
                       className="elegant-card rounded-3xl p-8 sophisticated-hover"
                     >
                       {/* Event image */}
-                      <div className="aspect-video rounded-2xl overflow-hidden mb-6">
+                      <div className={`${event.id === 2 ? 'aspect-[2/2]' : 'aspect-video'} rounded-2xl overflow-hidden mb-6`}>
                         <img
                           src={event.image}
                           alt={event.title}
@@ -165,7 +164,7 @@ const Timeline = () => {
                       {/* Event content */}
                       <h3 className="text-3xl serif text-gray-800 mb-4">{event.title}</h3>
                       <p className="text-lg text-gray-600 leading-relaxed mb-4">{event.description}</p>
-                      
+
                       {/* Location */}
                       <div className="flex items-center text-gray-500 mb-4">
                         <MapPin size={16} className="mr-2" />
@@ -208,7 +207,7 @@ const Timeline = () => {
           </motion.div>
           <h3 className="text-4xl serif text-gray-800 mb-6">To Be Continued...</h3>
           <p className="text-xl text-gray-600 leading-relaxed mb-8">
-            Our story is still being written. Every day brings new adventures, new memories, 
+            Our story is still being written. Every day brings new adventures, new memories,
             and new reasons to fall in love with you all over again.
           </p>
           <div className="w-32 h-px bg-gradient-to-r from-transparent via-yellow-600 to-transparent mx-auto"></div>
