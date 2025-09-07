@@ -7,48 +7,102 @@ const Gallery = () => {
   const albums = [
     {
       id: 1,
-      title: 'First Adventures',
-      description: 'Our earliest memories together.',
-      cover: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
+      title: 'First Date',
+      description: 'Our first official date memories.',
+      cover: '/src/assets/albums/first date/20240909_121005.jpg',
       media: [
-        {
-          type: 'image',
-          url: 'https://images.pexels.com/photos/1024993/pexels-photo-1024993.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-          title: 'First Date',
-          description: 'The beginning of our beautiful story',
-        },
-        {
-          type: 'image',
-          url: 'https://images.pexels.com/photos/1816654/pexels-photo-1816654.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-          title: 'Beach Sunset',
-          description: 'Golden hour with my golden girl',
-        },
-        {
-          type: 'video',
-          url: 'https://www.w3schools.com/html/mov_bbb.mp4',
-          title: 'Our First Video',
-          description: 'A fun day at the park',
-        },
+        { type: 'image', url: '/src/assets/albums/first date/20240909_121005.jpg' },
+        { type: 'image', url: '/src/assets/albums/first date/20240909_121008.jpg' },
+        { type: 'image', url: '/src/assets/albums/first date/Snapchat-1123126089.jpg' },
+        { type: 'image', url: '/src/assets/albums/first date/Snapchat-188329827.jpg' },
+        { type: 'image', url: '/src/assets/albums/first date/Snapchat-2002366959.jpg' },
+        { type: 'image', url: '/src/assets/albums/first date/Snapchat-283777194.jpg' },
+        { type: 'video', url: '/src/assets/albums/first date/Snapchat-622857547.mp4' },
+        { type: 'image', url: '/src/assets/albums/first date/Snapchat-690853652.jpg' },
+        { type: 'image', url: '/src/assets/albums/first date/Snapchat-871769054.jpg' },
       ],
     },
     {
       id: 2,
-      title: 'Cozy Moments',
-      description: 'Home is wherever you are.',
-      cover: 'https://images.pexels.com/photos/1024992/pexels-photo-1024992.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
+      title: 'Art Date',
+      description: 'A collection of art date memories.',
+      cover: '/src/assets/albums/art date/Snapchat-337729128.jpg',
       media: [
-        {
-          type: 'image',
-          url: 'https://images.pexels.com/photos/1024992/pexels-photo-1024992.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-          title: 'Cozy Evening',
-          description: 'Home is wherever you are',
-        },
-        {
-          type: 'image',
-          url: 'https://images.pexels.com/photos/1024988/pexels-photo-1024988.jpeg?auto=compress&cs=tinysrgb&w=800&h=1200&fit=crop',
-          title: 'City Lights',
-          description: 'Dancing under the stars',
-        },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1071229453.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1127230686.jpg' },
+        { type: 'video', url: '/src/assets/albums/art date/Snapchat-1173644644.mp4' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1184203243.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1198843755.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1199493870.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1203038165.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1211211887.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-122066854.jpg' },
+        { type: 'video', url: '/src/assets/albums/art date/Snapchat-1223133338.mp4' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1267739832.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1361525375.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1386991570.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-166754221.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1755864904.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1762553618.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1767278430.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-183391550.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-184717893.jpg' },
+        { type: 'video', url: '/src/assets/albums/art date/Snapchat-1879591739.mp4' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1889480375.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1981462126.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1992287904.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-2005529563.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-337729128.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-388811311.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-597037957.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-607715139.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-617538490.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-632865432.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-704270314.jpg' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-865463239.jpg' },
+      ],
+    },
+    {
+      id: 3,
+      title: 'Rooftop Date',
+      description: 'Special rooftop date memories.',
+      cover: '/src/assets/albums/rooftop date/20250329_152446.jpg',
+      media: [
+        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_142252.jpg' },
+        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_145520.jpg' },
+        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_152446.jpg' },
+        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_152710.jpg' },
+        { type: 'image', url: '/src/assets/albums/rooftop date/20250517_163811.jpg' },
+        { type: 'image', url: '/src/assets/albums/rooftop date/Snapchat-1412665655.jpg' },
+        { type: 'image', url: '/src/assets/albums/rooftop date/Snapchat-1565705203.jpg' },
+        { type: 'image', url: '/src/assets/albums/rooftop date/Snapchat-1571863218.jpg' },
+      ],
+    },
+    {
+      id: 4,
+      title: 'Randoms',
+      description: 'Random moments and memories.',
+      cover: '/src/assets/albums/randoms/Snapchat-2012772674.jpg',
+      media: [
+        { type: 'image', url: '/src/assets/albums/randoms/20250214_171922.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/20250214_172017.jpg' },
+        { type: 'video', url: '/src/assets/albums/randoms/Snapchat-103123124.mp4' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1037530612.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1105021754.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-173100795.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1941345676.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1967554179.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1976865519.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-2012772674.jpg' },
+        { type: 'video', url: '/src/assets/albums/randoms/Snapchat-2017212395.mp4' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-2048073210.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-312219279.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-337366375.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-450103072.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-706140728.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-75640906.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-79750910.jpg' },
+        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-916854534.jpg' },
       ],
     },
   ];
@@ -173,21 +227,21 @@ const Gallery = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: "spring", bounce: 0.3 }}
-              className="relative w-full max-w-6xl max-h-[90vh] mx-4 flex items-center justify-center"
+              className="relative w-full max-w-3xl max-h-[98vh] mx-4 flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Navigation - scrapbook themed buttons */}
               <button
                 onClick={prevMedia}
                 className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-4 bg-pink-200 border-2 border-pink-400 rounded-full shadow-lg hover:bg-pink-300 transition-colors text-pink-900 flex items-center justify-center"
-                style={{marginLeft: '1rem'}}
+                style={{ marginLeft: '1rem' }}
               >
                 <ArrowLeft size={32} />
               </button>
               <button
                 onClick={nextMedia}
                 className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-4 bg-green-200 border-2 border-green-400 rounded-full shadow-lg hover:bg-green-300 transition-colors text-green-900 flex items-center justify-center"
-                style={{marginRight: '1rem'}}
+                style={{ marginRight: '1rem' }}
               >
                 <ArrowRight size={32} />
               </button>
@@ -198,40 +252,44 @@ const Gallery = () => {
               >
                 <X size={28} />
               </button>
-              <div className="relative scrapbook-bg rounded-3xl overflow-visible shadow-2xl p-8 flex flex-col items-center justify-center w-full" style={{backgroundColor: '#fffbe9'}}>
+              <div className="relative scrapbook-bg rounded-3xl overflow-visible shadow-2xl p-8 flex flex-col items-center justify-center w-full" style={{ backgroundColor: '#fffbe9' }}>
                 {/* Decorative paper texture background */}
-                <div className="absolute inset-0 rounded-3xl pointer-events-none opacity-20" style={{backgroundImage: 'url("https://www.transparenttextures.com/patterns/paper-fibers.png")', backgroundRepeat: 'repeat'}} />
+                <div className="absolute inset-0 rounded-3xl pointer-events-none opacity-20" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/paper-fibers.png")', backgroundRepeat: 'repeat' }} />
                 {/* Polaroid frame with tape and rotation */}
                 <div className="relative z-10 flex flex-col items-center justify-center">
-                  <div className="relative polaroid-frame bg-white rounded-xl shadow-lg p-2 mb-4" style={{transform: `rotate(${selectedMedia % 2 === 0 ? '-3deg' : '3deg'})`, minWidth: '340px', maxWidth: '700px'}}>
+                  <div className="relative polaroid-frame bg-white rounded-xl shadow-lg p-2 mb-4" style={{ transform: `rotate(${selectedMedia % 2 === 0 ? '-3deg' : '3deg'})`, minWidth: '340px', maxWidth: '500px' }}>
                     {/* Decorative tape */}
                     <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-yellow-200 rounded rotate-[-8deg] shadow-md border border-yellow-300" />
                     {albums[selectedAlbum].media[selectedMedia].type === 'image' ? (
                       <img
                         src={albums[selectedAlbum].media[selectedMedia].url}
-                        alt={albums[selectedAlbum].media[selectedMedia].title || ''}
+                        alt={
+                          'title' in albums[selectedAlbum].media[selectedMedia]
+                            ? (albums[selectedAlbum].media[selectedMedia] as any).title || ''
+                            : ''
+                        }
                         className="w-full h-full object-cover rounded-lg"
-                        style={{maxHeight: '400px', maxWidth: '600px'}}
+                        style={{ maxHeight: '600px', maxWidth: '450px' }}
                       />
                     ) : (
                       <video
                         src={albums[selectedAlbum].media[selectedMedia].url}
                         controls
                         className="w-full h-full object-cover rounded-lg"
-                        style={{maxHeight: '400px', maxWidth: '600px'}}
+                        style={{ maxHeight: '600px', maxWidth: '450px' }}
                       />
                     )}
                   </div>
                   {/* Title/description below polaroid */}
                   <div className="text-center mt-2">
-                    {albums[selectedAlbum].media[selectedMedia].title && (
+                    {'title' in albums[selectedAlbum].media[selectedMedia] && (albums[selectedAlbum].media[selectedMedia] as any).title && (
                       <h3 className="text-2xl serif text-pink-700 mb-2 italic drop-shadow-sm">
-                        {albums[selectedAlbum].media[selectedMedia].title}
+                        {(albums[selectedAlbum].media[selectedMedia] as any).title}
                       </h3>
                     )}
-                    {albums[selectedAlbum].media[selectedMedia].description && (
+                    {'description' in albums[selectedAlbum].media[selectedMedia] && (albums[selectedAlbum].media[selectedMedia] as any).description && (
                       <p className="text-lg text-green-700 mb-2 script">
-                        {albums[selectedAlbum].media[selectedMedia].description}
+                        {(albums[selectedAlbum].media[selectedMedia] as any).description}
                       </p>
                     )}
                   </div>
