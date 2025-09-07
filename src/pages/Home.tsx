@@ -3,23 +3,8 @@ import { motion } from 'framer-motion';
 import { Heart, Sparkles, Star, Quote, ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import Navbar from '../components/Navbar';
 
 const Home = () => {
-  // Track scroll position to change navbar text color
-  const [navbarTextColor, setNavbarTextColor] = useState('text-white');
-  useEffect(() => {
-    const onScroll = () => {
-      // Change at 80vh (just after hero section)
-      if (window.scrollY > window.innerHeight * 0.8) {
-        setNavbarTextColor('text-gray-900');
-      } else {
-        setNavbarTextColor('text-white');
-      }
-    };
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
   const [revealSecret, setRevealSecret] = useState(false);
   const [clickCount, setClickCount] = useState(0);
 
@@ -31,15 +16,13 @@ const Home = () => {
   };
 
   return (
-    <>
-      <Navbar navbarTextColor={navbarTextColor} />
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 1.2 }}
-        className="min-h-screen"
-      >
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1.2 }}
+      className="min-h-screen"
+    >
         {/* Hero Section */}
         <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
           <div className="absolute inset-0 luxury-gradient opacity-95"></div>
@@ -366,8 +349,7 @@ const Home = () => {
             </div>
           </motion.section>
         </div>
-      </motion.div>
-    </>
+  </motion.div>
   );
 };
 
