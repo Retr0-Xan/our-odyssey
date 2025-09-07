@@ -165,7 +165,7 @@ const Gallery = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 backdrop-blur-sm"
+            className="fixed inset-0 z-50 flex items-center justify-center bg-yellow-50/90 backdrop-blur-sm"
             onClick={closeAlbum}
           >
             <motion.div
@@ -173,56 +173,72 @@ const Gallery = () => {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: "spring", bounce: 0.3 }}
-              className="relative max-w-5xl max-h-[90vh] mx-4"
+              className="relative w-full max-w-6xl max-h-[90vh] mx-4 flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Navigation */}
+              {/* Navigation - scrapbook themed buttons */}
               <button
                 onClick={prevMedia}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors text-white"
+                className="absolute left-0 top-1/2 -translate-y-1/2 z-20 p-4 bg-pink-200 border-2 border-pink-400 rounded-full shadow-lg hover:bg-pink-300 transition-colors text-pink-900 flex items-center justify-center"
+                style={{marginLeft: '1rem'}}
               >
-                <ArrowLeft size={24} />
+                <ArrowLeft size={32} />
               </button>
               <button
                 onClick={nextMedia}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors text-white"
+                className="absolute right-0 top-1/2 -translate-y-1/2 z-20 p-4 bg-green-200 border-2 border-green-400 rounded-full shadow-lg hover:bg-green-300 transition-colors text-green-900 flex items-center justify-center"
+                style={{marginRight: '1rem'}}
               >
-                <ArrowRight size={24} />
+                <ArrowRight size={32} />
               </button>
-              {/* Close button */}
+              {/* Close button - scrapbook themed */}
               <button
                 onClick={closeAlbum}
-                className="absolute top-4 right-4 z-10 p-3 bg-white/10 backdrop-blur-sm rounded-full hover:bg-white/20 transition-colors text-white"
+                className="absolute top-4 right-4 z-20 p-3 bg-yellow-200 border-2 border-yellow-400 rounded-full shadow-lg hover:bg-yellow-300 transition-colors text-yellow-900"
               >
-                <X size={24} />
+                <X size={28} />
               </button>
-              <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
-                <div className="aspect-[4/5] md:aspect-[16/10] flex items-center justify-center">
-                  {albums[selectedAlbum].media[selectedMedia].type === 'image' ? (
-                    <img
-                      src={albums[selectedAlbum].media[selectedMedia].url}
-                      alt={albums[selectedAlbum].media[selectedMedia].title || ''}
-                      className="w-full h-full object-cover"
-                    />
-                  ) : (
-                    <video
-                      src={albums[selectedAlbum].media[selectedMedia].url}
-                      controls
-                      className="w-full h-full object-cover"
-                    />
-                  )}
+              <div className="relative scrapbook-bg rounded-3xl overflow-visible shadow-2xl p-8 flex flex-col items-center justify-center w-full" style={{backgroundColor: '#fffbe9'}}>
+                {/* Decorative paper texture background */}
+                <div className="absolute inset-0 rounded-3xl pointer-events-none opacity-20" style={{backgroundImage: 'url("https://www.transparenttextures.com/patterns/paper-fibers.png")', backgroundRepeat: 'repeat'}} />
+                {/* Polaroid frame with tape and rotation */}
+                <div className="relative z-10 flex flex-col items-center justify-center">
+                  <div className="relative polaroid-frame bg-white rounded-xl shadow-lg p-2 mb-4" style={{transform: `rotate(${selectedMedia % 2 === 0 ? '-3deg' : '3deg'})`, minWidth: '340px', maxWidth: '700px'}}>
+                    {/* Decorative tape */}
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-yellow-200 rounded rotate-[-8deg] shadow-md border border-yellow-300" />
+                    {albums[selectedAlbum].media[selectedMedia].type === 'image' ? (
+                      <img
+                        src={albums[selectedAlbum].media[selectedMedia].url}
+                        alt={albums[selectedAlbum].media[selectedMedia].title || ''}
+                        className="w-full h-full object-cover rounded-lg"
+                        style={{maxHeight: '400px', maxWidth: '600px'}}
+                      />
+                    ) : (
+                      <video
+                        src={albums[selectedAlbum].media[selectedMedia].url}
+                        controls
+                        className="w-full h-full object-cover rounded-lg"
+                        style={{maxHeight: '400px', maxWidth: '600px'}}
+                      />
+                    )}
+                  </div>
+                  {/* Title/description below polaroid */}
+                  <div className="text-center mt-2">
+                    {albums[selectedAlbum].media[selectedMedia].title && (
+                      <h3 className="text-2xl serif text-pink-700 mb-2 italic drop-shadow-sm">
+                        {albums[selectedAlbum].media[selectedMedia].title}
+                      </h3>
+                    )}
+                    {albums[selectedAlbum].media[selectedMedia].description && (
+                      <p className="text-lg text-green-700 mb-2 script">
+                        {albums[selectedAlbum].media[selectedMedia].description}
+                      </p>
+                    )}
+                  </div>
                 </div>
-                <div className="p-8">
-                  {albums[selectedAlbum].media[selectedMedia].title && (
-                    <h3 className="text-3xl serif text-gray-800 mb-3">
-                      {albums[selectedAlbum].media[selectedMedia].title}
-                    </h3>
-                  )}
-                  {albums[selectedAlbum].media[selectedMedia].description && (
-                    <p className="text-lg text-gray-600 mb-2">
-                      {albums[selectedAlbum].media[selectedMedia].description}
-                    </p>
-                  )}
+                {/* Optional: Add whimsical sticker/doodle */}
+                <div className="absolute bottom-6 right-8 z-0 opacity-40 pointer-events-none">
+                  <Heart size={48} className="text-pink-300" />
                 </div>
               </div>
             </motion.div>
