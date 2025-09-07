@@ -2,7 +2,7 @@
 import { useLocation } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Heart, Camera, Calendar, MessageSquare, Clock, Music, BookOpen, Sparkles } from 'lucide-react';
+import { Heart, Camera, Calendar, MessageSquare, Music, BookOpen, Sparkles } from 'lucide-react';
 
 interface NavbarProps {
   navbarTextColor?: string;
@@ -11,7 +11,6 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ navbarTextColor }) => {
   const navItems = [
     { path: '/', label: 'Home', icon: Heart },
-    { path: '/timeline', label: 'Timeline', icon: Clock },
     { path: '/gallery', label: 'Gallery', icon: Camera },
     { path: '/letter', label: 'Letter', icon: BookOpen },
     { path: '/countdown', label: 'Countdown', icon: Calendar },
@@ -24,7 +23,6 @@ const Navbar: React.FC<NavbarProps> = ({ navbarTextColor }) => {
   // Map routes to text and bar color classes
   const routeColors: Record<string, { text: string; bar: string }> = {
     '/': { text: 'text-white', bar: 'bg-gray-800' },
-    '/timeline': { text: 'text-gray-900', bar: 'bg-white' },
     '/gallery': { text: 'text-gray-900', bar: 'bg-white' },
     '/letter': { text: 'text-gray-900', bar: 'bg-white' },
     '/countdown': { text: 'text-gray-900', bar: 'bg-white' },

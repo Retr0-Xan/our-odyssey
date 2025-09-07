@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import Timeline from './pages/Timeline';
 import Gallery from './pages/Gallery';
 import Letter from './pages/Letter';
 import Countdown from './pages/Countdown';
@@ -42,7 +41,6 @@ function AppContent() {
       <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/timeline" element={<Timeline />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/letter" element={<Letter />} />
           <Route path="/countdown" element={<Countdown />} />
