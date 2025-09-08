@@ -44,7 +44,7 @@ const Gallery = () => {
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1767278430.jpg', title: 'Full Vex', description: 'Please don\'t beat me' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-183391550.jpg', title: 'Hm', description: 'Hm' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-184717893.jpg', title: '', description: '' },
-        { type: 'video', url: '/src/assets/albums/art date/Snapchat-1879591739.mp4', title: 'Moody Maame', description: '' },
+        { type: 'video', url: '/src/assets/albums/art date/Snapchat-617585777.mp4', title: 'Moody Maame', description: '' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1889480375.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1981462126.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1992287904.jpg', title: 'Good Cop Bad Cop', description: 'We all know who the good cop is' },
