@@ -4,6 +4,9 @@ import { Heart, Sparkles, Star, Quote, ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 
+const cardImage = 'src/assets/albums/Snapchat-170008680.jpg';
+
+
 const Home = () => {
   const [revealSecret, setRevealSecret] = useState(false);
   const [clickCount, setClickCount] = useState(0);
@@ -176,9 +179,36 @@ const Home = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="py-32 px-6"
+          className="py-32 px-6 relative overflow-hidden"
         >
-          <div className="max-w-6xl mx-auto">
+          {/* Welcome Images Background */}
+          <div className="absolute inset-0 pointer-events-none z-0">
+            <motion.img
+              src="/src/assets/albums/welcome-images/Snapchat-182277444.jpg"
+              alt="Welcome BG 1"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 0.18 }}
+              transition={{ duration: 1.2, delay: 0.2 }}
+              className="absolute left-0 top-0 w-2/5 h-auto object-cover mix-blend-lighten"
+            />
+            <motion.img
+              src="/src/assets/albums/welcome-images/20250329_152710.jpg"
+              alt="Welcome BG 2"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 0.18 }}
+              transition={{ duration: 1.2, delay: 0.4 }}
+              className="absolute right-0 top-0 w-2/5 h-auto object-cover mix-blend-lighten"
+            />
+            <motion.img
+              src="/src/assets/albums/welcome-images/Snapchat-811751447.jpg"
+              alt="Welcome BG 3"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 0.18 }}
+              transition={{ duration: 1.2, delay: 0.6 }}
+              className="absolute left-1/2 bottom-0 -translate-x-1/2 w-2/5 h-auto object-cover mix-blend-lighten"
+            />
+          </div>
+          <div className="max-w-6xl mx-auto relative z-10">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <motion.div
                 initial={{ x: -50, opacity: 0 }}
@@ -208,7 +238,15 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="elegant-card rounded-3xl p-12 text-center">
+                <div className="elegant-card rounded-3xl p-12 text-center flex flex-col items-center">
+                  <motion.img
+                    src={cardImage}
+                    alt="Card Main"
+                    initial={{ opacity: 0, scale: 1.05 }}
+                    whileInView={{ opacity: 1, scale: 1.1 }}
+                    transition={{ duration: 1.2, delay: 0.2 }}
+                    className="mb-8 w-4/6 max-w-2xl h-96 object-cover rounded-2xl mx-auto shadow-lg"
+                  />
                   <Quote className="text-yellow-600 mx-auto mb-6" size={48} />
                   <blockquote className="text-2xl script text-gray-700 leading-relaxed mb-6">
                     "You are my today and all of my tomorrows"
@@ -223,93 +261,6 @@ const Home = () => {
                   </div>
                 </div>
               </motion.div>
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Features Grid */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="py-32 bg-gray-50"
-        >
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center mb-20">
-              <h2 className="text-5xl serif text-gray-800 mb-6">Explore Our Story</h2>
-              <div className="w-24 h-px bg-yellow-600 mx-auto mb-8"></div>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Each section of this website tells a different chapter of our love story.
-                Click through to discover memories, milestones, and moments that define us.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'Timeline',
-                  description: 'Journey through our milestones',
-                  icon: '⏰',
-                  link: '/timeline',
-                  color: 'from-blue-500 to-purple-600'
-                },
-                {
-                  title: 'Gallery',
-                  description: 'Curated memories in photos',
-                  icon: '📸',
-                  link: '/gallery',
-                  color: 'from-green-500 to-teal-600'
-                },
-                {
-                  title: 'Love Letter',
-                  description: 'A heartfelt note just for you',
-                  icon: '💌',
-                  link: '/letter',
-                  color: 'from-pink-500 to-rose-600'
-                },
-                {
-                  title: 'Countdown',
-                  description: 'Time until our next milestone',
-                  icon: '⏳',
-                  link: '/countdown',
-                  color: 'from-orange-500 to-red-600'
-                },
-                {
-                  title: 'Our Playlist',
-                  description: 'Songs that define our love',
-                  icon: '🎵',
-                  link: '/playlist',
-                  color: 'from-indigo-500 to-blue-600'
-                },
-                {
-                  title: 'Memory Quiz',
-                  description: 'Test your knowledge of us',
-                  icon: '🧠',
-                  link: '/quiz',
-                  color: 'from-yellow-500 to-orange-600'
-                },
-              ].map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  initial={{ y: 50, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  transition={{ delay: index * 0.1, duration: 0.8 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -10 }}
-                  className="group"
-                >
-                  <Link to={feature.link}>
-                    <div className="elegant-card rounded-3xl p-8 h-full sophisticated-hover">
-                      <div className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                        {feature.icon}
-                      </div>
-                      <h3 className="text-2xl serif text-gray-800 mb-4">{feature.title}</h3>
-                      <p className="text-gray-600 leading-relaxed">{feature.description}</p>
-                    </div>
-                  </Link>
-                </motion.div>
-              ))}
             </div>
           </div>
         </motion.section>
