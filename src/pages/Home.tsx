@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 
 
 const cardImage = 'src/assets/albums/Snapchat-170008680.jpg';
+const wlcImg1 = '/src/assets/albums/welcome-images/Snapchat-1804310939.jpg';
+const wlcImg2 = '/src/assets/albums/welcome-images/20250329_152710.jpg';
+const wlcImg3 = '/src/assets/albums/welcome-images/Snapchat-811751447.jpg';
+const wlcImg4 = '/src/assets/albums/welcome-images/Snapchat-1034629116.jpg';
 
 
 const Home = () => {
@@ -184,7 +188,7 @@ const Home = () => {
           {/* Welcome Images Background */}
           <div className="absolute inset-0 pointer-events-none z-0">
             <motion.img
-              src="/src/assets/albums/welcome-images/Snapchat-182277444.jpg"
+              src={wlcImg2}
               alt="Welcome BG 1"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 0.18 }}
@@ -192,7 +196,7 @@ const Home = () => {
               className="absolute left-0 top-0 w-2/5 h-auto object-cover mix-blend-lighten"
             />
             <motion.img
-              src="/src/assets/albums/welcome-images/20250329_152710.jpg"
+              src={wlcImg1}
               alt="Welcome BG 2"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 0.18 }}
@@ -200,7 +204,7 @@ const Home = () => {
               className="absolute right-0 top-0 w-2/5 h-auto object-cover mix-blend-lighten"
             />
             <motion.img
-              src="/src/assets/albums/welcome-images/Snapchat-811751447.jpg"
+              src={wlcImg3}
               alt="Welcome BG 3"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 0.18 }}
@@ -238,7 +242,7 @@ const Home = () => {
                 viewport={{ once: true }}
                 className="relative"
               >
-                <div className="elegant-card rounded-3xl p-12 text-center flex flex-col items-center">
+                <div className="elegant-card rounded-2xl p-12 text-center flex flex-col items-center">
                   <motion.img
                     src={cardImage}
                     alt="Card Main"
@@ -247,6 +251,8 @@ const Home = () => {
                     transition={{ duration: 1.2, delay: 0.2 }}
                     className="mb-8 w-4/6 max-w-2xl h-96 object-cover rounded-2xl mx-auto shadow-lg"
                   />
+                  {/* Add transparency to the card background */}
+                  <style>{`.elegant-card { background: rgba(255,255,255,0.0) !important; }`}</style>
                   <Quote className="text-yellow-600 mx-auto mb-6" size={48} />
                   <blockquote className="text-2xl script text-gray-700 leading-relaxed mb-6">
                     "You are my today and all of my tomorrows"
