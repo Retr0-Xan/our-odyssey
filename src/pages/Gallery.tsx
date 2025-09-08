@@ -8,7 +8,7 @@ const Gallery = () => {
     {
       id: 1,
       title: 'First Date',
-      description: 'Our first official date memories.',
+      description: 'Our first official date memories',
       cover: '/src/assets/albums/first date/20240909_121005.jpg',
       media: [
         { type: 'image', url: '/src/assets/albums/first date/20240909_121005.jpg', title: 'Our First Date', description: 'Miss these your glasses' },
@@ -22,8 +22,8 @@ const Gallery = () => {
     },
     {
       id: 2,
-      title: 'Art Date',
-      description: 'A collection of art date memories.',
+      title: 'Art Gallery Date',
+      description: 'Ft. Kanta Wig',
       cover: '/src/assets/albums/art date/Snapchat-337729128.jpg',
       media: [
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1071229453.jpg', title: 'It\'s the lips for me', description: '' },
@@ -35,7 +35,7 @@ const Gallery = () => {
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1211211887.jpg', title: 'Okkkkkkk', description: '👯' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-122066854.jpg', title: '', description: '' },
         { type: 'video', url: '/src/assets/albums/art date/Snapchat-1223133338.mp4', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1267739832.jpg', title: '', description: '' },
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1267739832.jpg', title: 'Kanta wig in the wind', description: '' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1361525375.jpg', title: 'The art behind the art', description: '' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1386991570.jpg', title: 'Our Favorite Pose', description: '' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-166754221.jpg', title: '', description: 'I don\'t know what we were trying to do here.' },
@@ -43,7 +43,7 @@ const Gallery = () => {
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1762553618.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1767278430.jpg', title: 'Full Vex', description: 'Please don\'t beat me' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-183391550.jpg', title: 'Hm', description: 'Hm' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-184717893.jpg', title: '', description: ''},
+        { type: 'image', url: '/src/assets/albums/art date/Snapchat-184717893.jpg', title: '', description: '' },
         { type: 'video', url: '/src/assets/albums/art date/Snapchat-1879591739.mp4', title: 'Moody Maame', description: '' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1889480375.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/art date/Snapchat-1981462126.jpg', title: '', description: '' },
@@ -61,11 +61,11 @@ const Gallery = () => {
     {
       id: 3,
       title: 'Rooftop Date',
-      description: 'Special rooftop date memories.',
+      description: 'Our Spot',
       cover: '/src/assets/albums/rooftop date/20250329_152446.jpg',
       media: [
-        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_142252.jpg', title: 'Rooftop Arrival', description: 'Arriving at the rooftop.' },
         { type: 'image', url: '/src/assets/albums/rooftop date/20250329_145520.jpg', title: '', description: 'Lowkey one of my favorites' },
+        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_142252.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/rooftop date/20250329_152446.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/rooftop date/20250329_152710.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/rooftop date/20250517_163811.jpg', title: 'Epic Fail', description: 'But like i tear o' },
@@ -77,7 +77,7 @@ const Gallery = () => {
     {
       id: 4,
       title: 'Randoms',
-      description: 'Random moments and memories.',
+      description: 'Random moments and memories',
       cover: '/src/assets/albums/randoms/Snapchat-2012772674.jpg',
       media: [
         { type: 'image', url: '/src/assets/albums/randoms/20250214_171922.jpg', title: '"Beautiful"', description: '' },
@@ -307,13 +307,10 @@ const Gallery = () => {
       >
         <div className="elegant-card rounded-3xl p-16 text-center">
           <Heart className="text-yellow-600 mx-auto mb-8" size={48} />
-          <h3 className="text-3xl serif text-gray-800 mb-6">Add New Memories</h3>
+          <h3 className="text-3xl serif text-gray-800 mb-6">Ready to make more memories with you</h3>
           <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-            Upload more beautiful moments to our collection
+            Cheers to many more memories to come...
           </p>
-          <button className="px-8 py-4 border-2 border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-500 rounded-none font-medium tracking-wider">
-            CHOOSE PHOTOS
-          </button>
         </div>
       </motion.div>
     </motion.div>
