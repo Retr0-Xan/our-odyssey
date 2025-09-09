@@ -152,21 +152,21 @@ const Gallery = () => {
       description: 'Random moments and memories',
       cover: randomsCover,
       media: [
-  { type: 'image', url: rnd_20250214_171922, title: '"Beautiful"', description: '' },
-  { type: 'image', url: rnd_20250214_172017, title: '', description: '' },
-  { type: 'video', url: rnd_vid_103123124, title: 'Passenger Princess', description: '' },
-  { type: 'image', url: rnd_1037530612, title: 'Birthday Princess', description: '' },
-  { type: 'image', url: rnd_1941345676, title: '', description: '' },
-  { type: 'image', url: rnd_1967554179, title: 'Cute', description: '' },
-  { type: 'image', url: rnd_1976865519, title: '', description: '' },
-  { type: 'image', url: randomsCover, title: '', description: '' },
-  { type: 'video', url: rnd_vid_2017212395, title: '', description: 'I\'m very serious' },
-  { type: 'image', url: rnd_2048073210, title: 'First art Session', description: 'Mine is the nicer fish' },
-  { type: 'image', url: rnd_312219279, title: '', description: '' },
-  { type: 'image', url: rnd_337366375, title: '', description: '' },
-  { type: 'image', url: rnd_75640906, title: 'Greet The World with Open Arms', description: '' },
-  { type: 'image', url: rnd_79750910, title: 'Hm', description: 'Catfish' },
-  { type: 'image', url: rnd_916854534, title: '', description: '' },
+        { type: 'image', url: rnd_20250214_171922, title: '"Beautiful"', description: '' },
+        { type: 'image', url: rnd_20250214_172017, title: '', description: '' },
+        { type: 'video', url: rnd_vid_103123124, title: 'Passenger Princess', description: '' },
+        { type: 'image', url: rnd_1037530612, title: 'Birthday Princess', description: '' },
+        { type: 'image', url: rnd_1941345676, title: '', description: '' },
+        { type: 'image', url: rnd_1967554179, title: 'Cute', description: '' },
+        { type: 'image', url: rnd_1976865519, title: '', description: '' },
+        { type: 'image', url: randomsCover, title: '', description: '' },
+        { type: 'video', url: rnd_vid_2017212395, title: '', description: 'I\'m very serious' },
+        { type: 'image', url: rnd_2048073210, title: 'First art Session', description: 'Mine is the nicer fish' },
+        { type: 'image', url: rnd_312219279, title: '', description: '' },
+        { type: 'image', url: rnd_337366375, title: '', description: '' },
+        { type: 'image', url: rnd_75640906, title: 'Greet The World with Open Arms', description: '' },
+        { type: 'image', url: rnd_79750910, title: 'Hm', description: 'Catfish' },
+        { type: 'image', url: rnd_916854534, title: '', description: '' },
       ],
     },
   ];
@@ -254,6 +254,8 @@ const Gallery = () => {
                   <img
                     src={album.cover}
                     alt={album.title}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
@@ -332,6 +334,8 @@ const Gallery = () => {
                             ? (albums[selectedAlbum].media[selectedMedia] as any).title || ''
                             : ''
                         }
+                        loading="lazy"
+                        decoding="async"
                         className="w-full h-full object-cover rounded-lg"
                         style={{ maxHeight: '600px', maxWidth: '450px' }}
                       />
@@ -339,6 +343,8 @@ const Gallery = () => {
                       <video
                         src={albums[selectedAlbum].media[selectedMedia].url}
                         controls
+                        preload="metadata"
+                        playsInline
                         className="w-full h-full object-cover rounded-lg"
                         style={{ maxHeight: '600px', maxWidth: '450px' }}
                       />
