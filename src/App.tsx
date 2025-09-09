@@ -10,7 +10,6 @@ import Playlist from './pages/Playlist';
 
 // import Map from './pages/Map';
 import Calendar from './pages/Calendar';
-import Messages from './pages/Messages';
 import FloatingElements from './components/FloatingHearts';
 import './App.css';
 
@@ -48,7 +47,7 @@ function AppContent() {
           <Route path="/countdown" element={<Countdown />} />
           <Route path="/playlist" element={<Playlist />} />
           <Route path="/calendar" element={<Calendar />} />
-          <Route path="/messages" element={<Messages />} />
+
         </Routes>
       </AnimatePresence>
     </div>

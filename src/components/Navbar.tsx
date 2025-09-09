@@ -2,7 +2,7 @@
 import { useLocation } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Heart, Camera, Calendar, MessageSquare, Music, BookOpen } from 'lucide-react';
+import { Heart, Camera, Calendar, Music, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
   navbarTextColor?: string;
@@ -16,7 +16,6 @@ const Navbar: React.FC<NavbarProps> = ({ navbarTextColor }) => {
     { path: '/countdown', label: 'Countdown', icon: Calendar },
     { path: '/playlist', label: 'Playlist', icon: Music },
 
-    { path: '/messages', label: 'Messages', icon: MessageSquare },
   ];
 
   const location = useLocation();
