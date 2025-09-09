@@ -42,7 +42,7 @@ const Countdown = () => {
       icon: Heart
     },
     {
-      date: 'February 14, 2025',
+      date: 'February 14, 2026',
       title: 'Valentine\'s Day',
       description: 'Our second Valentine\'s together',
       status: 'upcoming',
