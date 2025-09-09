@@ -1,13 +1,13 @@
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Sparkles, Star, Quote, ArrowDown } from 'lucide-react';
 
-
-const cardImage = 'src/assets/albums/Snapchat-170008680.jpg';
-const wlcImg1 = '/src/assets/albums/welcome-images/Snapchat-1804310939.jpg';
-const wlcImg2 = '/src/assets/albums/welcome-images/20250329_152710.jpg';
-const wlcImg3 = '/src/assets/albums/welcome-images/Snapchat-811751447.jpg';
-const wlcImg4 = '/src/assets/albums/welcome-images/Snapchat-1034629116.jpg';
+import cardImage from '../assets/albums/Snapchat-170008680.jpg';
+import wlcImg1 from '../assets/albums/welcome-images/Snapchat-1804310939.jpg';
+import wlcImg2 from '../assets/albums/welcome-images/20250329_152710.jpg';
+import wlcImg3 from '../assets/albums/welcome-images/Snapchat-811751447.jpg';
+import wlcImg4 from '../assets/albums/welcome-images/Snapchat-1034629116.jpg';
 
 
 const Home = () => {
