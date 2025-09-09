@@ -7,8 +7,8 @@ import Gallery from './pages/Gallery';
 import Letter from './pages/Letter';
 import Countdown from './pages/Countdown';
 import Playlist from './pages/Playlist';
-import Quiz from './pages/Quiz';
-import Map from './pages/Map';
+
+// import Map from './pages/Map';
 import Calendar from './pages/Calendar';
 import Messages from './pages/Messages';
 import FloatingElements from './components/FloatingHearts';
@@ -45,8 +45,6 @@ function AppContent() {
           <Route path="/letter" element={<Letter />} />
           <Route path="/countdown" element={<Countdown />} />
           <Route path="/playlist" element={<Playlist />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/map" element={<Map />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/messages" element={<Messages />} />
         </Routes>

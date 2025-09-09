@@ -2,7 +2,7 @@
 import { useLocation } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Heart, Camera, Calendar, MessageSquare, Music, BookOpen, Sparkles } from 'lucide-react';
+import { Heart, Camera, Calendar, MessageSquare, Music, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
   navbarTextColor?: string;
@@ -15,7 +15,7 @@ const Navbar: React.FC<NavbarProps> = ({ navbarTextColor }) => {
     { path: '/letter', label: 'Letter', icon: BookOpen },
     { path: '/countdown', label: 'Countdown', icon: Calendar },
     { path: '/playlist', label: 'Playlist', icon: Music },
-    { path: '/quiz', label: 'Quiz', icon: Sparkles },
+
     { path: '/messages', label: 'Messages', icon: MessageSquare },
   ];
 
@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ navbarTextColor }) => {
     '/letter': { text: 'text-gray-900', bar: 'bg-white' },
     '/countdown': { text: 'text-gray-900', bar: 'bg-white' },
     '/playlist': { text: 'text-gray-900', bar: 'bg-white' },
-    '/quiz': { text: 'text-gray-900', bar: 'bg-white' },
+
     '/messages': { text: 'text-gray-900', bar: 'bg-white' },
   };
   // Use dynamic color for Home page if prop is provided
