@@ -60,7 +60,7 @@ const Gallery = () => {
     },
     {
       id: 3,
-      title: 'Rooftop Date',
+      title: 'Rooftop Rebels',
       description: 'Our Spot',
       cover: '/src/assets/albums/rooftop date/20250329_152446.jpg',
       media: [
@@ -82,17 +82,16 @@ const Gallery = () => {
       media: [
         { type: 'image', url: '/src/assets/albums/randoms/20250214_171922.jpg', title: '"Beautiful"', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/20250214_172017.jpg', title: '', description: '' },
-        { type: 'video', url: '/src/assets/albums/randoms/Snapchat-103123124.mp4', title: 'Random Video', description: 'A random video moment.' },
+        { type: 'video', url: '/src/assets/albums/randoms/Snapchat-103123124.mp4', title: 'Passenger Princess', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1037530612.jpg', title: 'Birthday Princess', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1941345676.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1967554179.jpg', title: 'Cute', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1976865519.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-2012772674.jpg', title: '', description: '' },
-        { type: 'video', url: '/src/assets/albums/randoms/Snapchat-2017212395.mp4', title: 'Random Clip', description: 'A random video clip.' },
+        { type: 'video', url: '/src/assets/albums/randoms/Snapchat-2017212395.mp4', title: '', description: 'I\'m very serious' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-2048073210.jpg', title: 'First art Session', description: 'Mine is the nicer fish' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-312219279.jpg', title: '', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-337366375.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-450103072.jpg', title: 'Sage Appreciation Picture', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-75640906.jpg', title: 'Greet The World with Open Arms', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-79750910.jpg', title: 'Hm', description: 'Catfish' },
         { type: 'image', url: '/src/assets/albums/randoms/Snapchat-916854534.jpg', title: '', description: '' },
@@ -146,7 +145,7 @@ const Gallery = () => {
           </h1>
           <div className="w-24 h-px bg-yellow-600 mx-auto mb-8"></div>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            A curated collection of moments that define our journey together
+            Some moments of our journey together
           </p>
         </motion.div>
       </div>
