@@ -6,9 +6,10 @@ import { Heart, Camera, Calendar, Music, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
   navbarTextColor?: string;
+  onLogout?: () => void;
 }
 
-const Navbar: React.FC<NavbarProps> = ({ navbarTextColor }) => {
+const Navbar: React.FC<NavbarProps> = ({ navbarTextColor, onLogout }) => {
   const navItems = [
     { path: '/', label: 'Home', icon: Heart },
     { path: '/gallery', label: 'Gallery', icon: Camera },
@@ -52,7 +53,7 @@ const Navbar: React.FC<NavbarProps> = ({ navbarTextColor }) => {
             >
               <Heart className="text-yellow-600" size={20} />
               <h1 className={`text-lg font-bold serif ${textColorClass}`}>
-                Our Story
+                Our Odyssey
               </h1>
             </motion.div>
 
@@ -85,6 +86,14 @@ const Navbar: React.FC<NavbarProps> = ({ navbarTextColor }) => {
                 </NavLink>
               ))}
             </div>
+            {onLogout && (
+              <button
+                onClick={onLogout}
+                className="ml-4 px-4 py-2 rounded bg-orange-500 text-white hover:bg-orange-600 transition-colors"
+              >
+                Log Out
+              </button>
+            )}
           </div>
         </div>
       </div>
