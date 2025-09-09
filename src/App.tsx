@@ -19,6 +19,8 @@ function AppContent() {
   const [navbarTextColor, setNavbarTextColor] = useState('text-white');
 
   useEffect(() => {
+    // Always scroll to top on route change
+    window.scrollTo({ top: 0, behavior: 'auto' });
     if (location.pathname === '/') {
       const onScroll = () => {
         if (window.scrollY > window.innerHeight * 0.8) {
