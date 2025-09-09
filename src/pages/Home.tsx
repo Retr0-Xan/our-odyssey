@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Sparkles, Star, Quote, ArrowDown } from 'lucide-react';
-import { Link } from 'react-router-dom';
 
 
 const cardImage = 'src/assets/albums/Snapchat-170008680.jpg';
@@ -15,10 +14,17 @@ const Home = () => {
   const [revealSecret, setRevealSecret] = useState(false);
   const [clickCount, setClickCount] = useState(0);
 
+  // Ref for welcome section
+  const welcomeRef = React.useRef<HTMLDivElement>(null);
+
   const handleSecretClick = () => {
     setClickCount(prev => prev + 1);
     if (clickCount >= 6) {
       setRevealSecret(true);
+    }
+    // Scroll to welcome section
+    if (welcomeRef.current) {
+      welcomeRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -107,13 +113,6 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
               />
             </button>
-
-            <Link
-              to="/timeline"
-              className="group relative px-10 py-4 bg-yellow-400 text-black hover:bg-transparent hover:text-yellow-400 border border-yellow-400 transition-all duration-500 rounded-none font-medium tracking-wider"
-            >
-              <span className="relative z-10">VIEW TIMELINE</span>
-            </Link>
           </motion.div>
         </motion.div>
 
@@ -179,6 +178,7 @@ const Home = () => {
       <div className="bg-white">
         {/* Welcome Section */}
         <motion.section
+          ref={welcomeRef}
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 1 }}
@@ -227,7 +227,7 @@ const Home = () => {
                 <p className="text-xl text-gray-600 leading-relaxed mb-8">
                   A digital sanctuary where our love story lives,
                   breathes, and grows. a space just for us,
-                   a testament to what we've built together and everything we are yet to build.
+                  a testament to what we've built together and everything we are yet to build.
                 </p>
                 <p className="text-lg text-gray-500 leading-relaxed">
                   Happy Anniversary Maame Akua!
