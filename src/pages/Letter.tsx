@@ -8,14 +8,24 @@ const Letter = () => {
   const letterPages = [
     {
       title: "My Dearest Love",
-      content: `As I sit here writing this letter, my heart overflows with emotions I never knew existed before you came into my life. Words feel inadequate to express the depth of what you mean to me, but I'll try my best to capture even a fraction of the love that fills my soul.
+      content: `It's crazy to think it's already been a year since we've been together. It feels as if I've known you much longer. (Technically yes, but you know what I mean😉).
+      Giving Fortnite another chance was one of the best decisions I've ever made because it led me to you.
 
-From the very first moment I saw you, something shifted in my universe. It wasn't just attraction—though you are breathtakingly beautiful—it was recognition. My soul recognized yours, as if we had been searching for each other across lifetimes.
+      I honestly sometimes sit to think about how different my life would be if I hadn't met you. You have brought so much joy, love, and light into my life. And I'm so grateful to God for bringing you into my life. He really cooked with this one
 
-You have this incredible way of making the ordinary feel extraordinary. A simple morning coffee becomes a cherished ritual when shared with you. A walk in the park transforms into an adventure when your hand is in mine. Even silence feels like the most beautiful conversation when we're together.`
+I know we've had our ups and downs, but every moment with you has been worth it. I don't know about you, but I feel like I've grown so much as a person since we've been together. You've challenged me to be better. You genuinely get stressed over me (sorry wai), and I love that you care so much, and I am so grateful for that.I love how we can talk about anything and everything, and how we can be ourselves together.
+
+I know I'm not an easy person, and I understand that I can't give you everything now, but I promise to keep working on myself for you (and for me obviously, don't worry). You are my rock, my confidant, my best friend. 
+  
+  
+
+You are my greatest adventure, my safest harbor, my most cherished dream come true. Thank you for loving me, for choosing me, for being exactly who you are.
+
+Forever and always yours,
+With all my love ❤️`
     },
     {
-      title: "The Way You Love",
+      title: "",
       content: `Your love is like sunlight breaking through clouds after a storm—warm, healing, and absolutely essential to my existence. You love with your whole heart, holding nothing back, and that courage inspires me every single day.
 
 I love how you laugh at my terrible jokes, how you sing in the shower when you think I can't hear, how you scrunch your nose when you're concentrating. I love your passion for the things you care about, your kindness to strangers, your unwavering loyalty to the people you love.
@@ -25,17 +35,211 @@ You've taught me that love isn't just a feeling—it's a choice we make every da
 The way you see the world has changed how I see it too. Through your eyes, I've discovered beauty in places I never looked before, found joy in moments I might have overlooked, and learned that the smallest gestures can carry the deepest meaning.`
     },
     {
-      title: "Our Future Together",
-      content: `When I think about our future, I see endless possibilities painted in the colors of our love. I see lazy Sunday mornings and exciting adventures, quiet evenings and celebrations with friends, challenges we'll face together and victories we'll share.
+      title: "100 reasons why I love you",
+      content: `1. Your smile lights up my world.
 
-I see us growing old together, still holding hands, still laughing at inside jokes that no one else understands. I see us creating a home filled with love, laughter, and maybe the patter of little feet someday. I see us supporting each other's dreams and building new ones together.
 
-But more than any specific future, I see us. I see the love we share continuing to grow, deepen, and evolve. I see us choosing each other again and again, through all of life's seasons.
+2. You make me laugh like no one else can.
 
-You are my greatest adventure, my safest harbor, my most cherished dream come true. Thank you for loving me, for choosing me, for being exactly who you are.
 
-Forever and always yours,
-With all my love ❤️`
+3. Your kindness is boundless.
+
+
+4. You believe in me even when I don't believe in myself.
+
+
+5. Your hugs are my safe haven.
+
+
+6. You have the most beautiful soul.
+
+
+7. You challenge me to be a better person.
+
+
+8. Your creativity inspires me.
+
+
+9. You listen to me, really listen.
+
+
+10. Your passion for life is contagious.
+
+
+11. You make ordinary moments extraordinary.
+
+
+12. Your strength amazes me.
+
+
+13. You support my dreams as if they were your own.
+
+
+14. Your honesty is refreshing.
+
+
+15. You have a heart of gold.
+
+
+16. Your adventurous spirit makes life exciting.
+
+
+17. You remember the little things about me.
+
+
+18. Your patience is endless.
+
+
+19. You make me feel special every single day.
+
+
+20. Your love is unconditional.
+
+
+21. You are my best friend and confidant.
+
+
+22. Your eyes sparkle with mischief and joy.
+
+
+23. You have an incredible sense of humor.
+
+
+24. Your cooking is delicious (even when you burn the toast).
+
+
+25. You make me feel safe and protected.
+
+
+26. Your optimism brightens my darkest days.
+
+
+27. You are incredibly thoughtful.
+
+
+28. Your determination is inspiring.
+
+
+29. You have a way of making everyone feel welcome.
+
+
+30. Your spontaneity keeps life interesting.
+
+
+31. You are my rock in times of trouble.
+
+
+32. Your love for animals shows your compassionate heart.
+
+
+33. You make me want to be a better person.
+
+
+34. Your intelligence is impressive.
+
+
+35. You have a unique perspective on life that I adore.
+
+
+36. Your generosity knows no bounds.
+
+
+37. You make me feel beautiful inside and out.
+
+
+38. Your sense of style is impeccable.
+
+
+39. You are my partner in crime and adventure.
+
+
+40. Your laughter is music to my ears.
+
+
+41. You have a way of making me feel understood.
+
+
+42. Your resilience in the face of challenges is admirable.
+
+
+43. You are my biggest cheerleader.
+
+
+44. Your love for life is infectious.
+
+
+45. You make me feel cherished and valued.
+
+
+46. Your creativity knows no limits.
+
+
+47. You have a heart that loves deeply and fiercely.
+
+
+48. Your sense of humor always brightens my day.
+
+
+49. You are my favorite person to spend time with.
+
+
+50. Your love is the greatest gift I've ever received.
+
+
+51. You make me feel like I can conquer the world.
+
+
+52. Your adventurous spirit makes every day an adventure.
+
+
+53. You have a way of making me feel at home wherever we are.
+54. Your love for family is heartwarming.
+55. You make me feel like the luckiest person alive.
+56. Your kindness to others is inspiring.
+57. You have a way of making me feel special and loved.
+58. Your passion for your hobbies is contagious.
+59. You make me feel like I can be myself around you.
+60. Your love is my anchor in a chaotic world.
+61. You have a way of making me feel like the most important person in the world.
+62. Your sense of adventure makes life exciting.
+63. You make me feel like I can achieve anything with you by my side.
+64. Your love is my guiding light.
+65. You have a way of making me feel like I belong.
+66. Your laughter is my favorite sound.
+67. You make me feel like I can take on any challenge with you.
+68. Your love is my safe haven.
+69. You have a way of making me feel like I am enough just as I am.
+70. Your adventurous spirit makes every day an adventure.
+71. You make me feel like I can be vulnerable and open with you.
+72. Your love is my greatest source of strength.
+73. You have a way of making me feel like I am the most important person in your life.
+74. Your kindness to others is inspiring.
+75. You make me feel like I can be my true self around you.
+76. Your love is my anchor in a chaotic world.
+77. You have a way of making me feel like I belong.
+78. Your laughter is my favorite sound.
+79. You make me feel like I can take on any challenge with you by my side.
+80. Your love is my safe haven.
+81. You have a way of making me feel like I am enough just as I am.
+82. Your adventurous spirit makes every day an adventure.
+83. You make me feel like I can be vulnerable and open with you.
+84. Your love is my greatest source of strength.
+85. You have a way of making me feel like I am the most important person in your life.
+86. Your kindness to others is inspiring.
+87. You make me feel like I can be my true self around you.
+88. Your love is my anchor in a chaotic world.
+89. You have a way of making me feel like I belong.
+90. Your laughter is my favorite sound.
+91. You make me feel like I can take on any challenge with you by my side.
+92. Your love is my safe haven.
+93. You have a way of making me feel like I am enough just as I am.
+94. Your adventurous spirit makes every day an adventure.
+95. You make me feel like I can be vulnerable and open with you.
+96. Your love is my greatest source of strength.
+97. You have a way of making me feel like I am the most important person in your life.
+98. Your kindness to others is inspiring.
+99. You make me feel like I can be my true self around you.
+100. Your love is my anchor in a chaotic world.`
     }
   ];
 
@@ -164,26 +368,6 @@ With all my love ❤️`
           <div className="absolute inset-0 bg-gradient-to-br from-amber-200/20 to-orange-200/20 rounded-3xl transform translate-x-2 translate-y-2 -z-10"></div>
         </motion.div>
 
-        {/* Response section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="mt-20"
-        >
-          <div className="elegant-card rounded-3xl p-12 text-center">
-            <Heart className="text-rose-500 mx-auto mb-6 heartbeat" size={48} />
-            <h3 className="text-3xl serif text-gray-800 mb-6">Your Turn</h3>
-            <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-              This letter is just the beginning of our conversation. I'd love to hear your thoughts, 
-              your feelings, your own words of love.
-            </p>
-            <button className="px-8 py-4 bg-rose-500 text-white hover:bg-rose-600 transition-all duration-300 rounded-none font-medium tracking-wider shadow-lg hover:shadow-xl">
-              WRITE BACK TO ME
-            </button>
-          </div>
-        </motion.div>
       </div>
     </motion.div>
   );
