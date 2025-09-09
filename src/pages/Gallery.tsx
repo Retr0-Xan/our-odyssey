@@ -2,6 +2,63 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Heart, ArrowLeft, ArrowRight } from 'lucide-react';
 
+// First Date
+import firstDateCover from '../assets/albums/first date/20240909_121005.jpg';
+import firstDateImg1 from '../assets/albums/first date/20240909_121005.jpg';
+import firstDateImg2 from '../assets/albums/first date/20240909_121008.jpg';
+import firstDateImg3 from '../assets/albums/first date/Snapchat-1123126089.jpg';
+import firstDateImg4 from '../assets/albums/first date/Snapchat-188329827.jpg';
+import firstDateImg5 from '../assets/albums/first date/Snapchat-283777194.jpg';
+import firstDateImg6 from '../assets/albums/first date/Snapchat-690853652.jpg';
+import firstDateImg7 from '../assets/albums/first date/Snapchat-871769054.jpg';
+
+// Art Gallery Date
+import artGalleryCover from '../assets/albums/art date/Snapchat-337729128.jpg';
+import artImg1 from '../assets/albums/art date/Snapchat-1071229453.jpg';
+import artVid1 from '../assets/albums/art date/Snapchat-1173644644.mp4';
+import artImg2 from '../assets/albums/art date/Snapchat-1184203243.jpg';
+import artImg3 from '../assets/albums/art date/Snapchat-1198843755.jpg';
+import artImg4 from '../assets/albums/art date/Snapchat-1199493870.jpg';
+import artImg5 from '../assets/albums/art date/Snapchat-1203038165.jpg';
+import artImg6 from '../assets/albums/art date/Snapchat-1211211887.jpg';
+import artImg7 from '../assets/albums/art date/Snapchat-122066854.jpg';
+import artVid2 from '../assets/albums/art date/Snapchat-1223133338.mp4';
+import artImg8 from '../assets/albums/art date/Snapchat-1267739832.jpg';
+import artImg9 from '../assets/albums/art date/Snapchat-1361525375.jpg';
+import artImg10 from '../assets/albums/art date/Snapchat-1386991570.jpg';
+import artImg11 from '../assets/albums/art date/Snapchat-166754221.jpg';
+import artImg12 from '../assets/albums/art date/Snapchat-1755864904.jpg';
+import artImg13 from '../assets/albums/art date/Snapchat-1762553618.jpg';
+import artImg14 from '../assets/albums/art date/Snapchat-1767278430.jpg';
+import artImg15 from '../assets/albums/art date/Snapchat-183391550.jpg';
+import artImg16 from '../assets/albums/art date/Snapchat-184717893.jpg';
+import artVid3 from '../assets/albums/art date/Snapchat-617585777.mp4';
+import artImg17 from '../assets/albums/art date/Snapchat-1889480375.jpg';
+import artImg18 from '../assets/albums/art date/Snapchat-1981462126.jpg';
+import artImg19 from '../assets/albums/art date/Snapchat-1992287904.jpg';
+import artImg20 from '../assets/albums/art date/Snapchat-337729128.jpg';
+import artImg21 from '../assets/albums/art date/Snapchat-388811311.jpg';
+import artImg22 from '../assets/albums/art date/Snapchat-597037957.jpg';
+import artImg23 from '../assets/albums/art date/Snapchat-607715139.jpg';
+import artImg24 from '../assets/albums/art date/Snapchat-617538490.jpg';
+import artImg25 from '../assets/albums/art date/Snapchat-632865432.jpg';
+import artImg26 from '../assets/albums/art date/Snapchat-704270314.jpg';
+import artImg27 from '../assets/albums/art date/Snapchat-865463239.jpg';
+
+// Rooftop Rebels
+import rooftopCover from '../assets/albums/rooftop date/20250329_152446.jpg';
+import rooftopImg1 from '../assets/albums/rooftop date/20250329_145520.jpg';
+import rooftopImg2 from '../assets/albums/rooftop date/20250329_142252.jpg';
+import rooftopImg3 from '../assets/albums/rooftop date/20250329_152446.jpg';
+import rooftopImg4 from '../assets/albums/rooftop date/20250329_152710.jpg';
+import rooftopImg5 from '../assets/albums/rooftop date/20250517_163811.jpg';
+import rooftopImg6 from '../assets/albums/rooftop date/Snapchat-1412665655.jpg';
+import rooftopImg7 from '../assets/albums/rooftop date/Snapchat-1565705203.jpg';
+import rooftopImg8 from '../assets/albums/rooftop date/Snapchat-1571863218.jpg';
+
+// Randoms
+import randomsCover from '../assets/albums/randoms/Snapchat-2012772674.jpg';
+
 const Gallery = () => {
   // Album structure: cover, title, description, media[]
   const albums = [
@@ -9,76 +66,76 @@ const Gallery = () => {
       id: 1,
       title: 'First Date',
       description: 'Our first official date memories',
-      cover: '/src/assets/albums/first date/20240909_121005.jpg',
+      cover: firstDateCover,
       media: [
-        { type: 'image', url: '/src/assets/albums/first date/20240909_121005.jpg', title: 'Our First Date', description: 'Miss these your glasses' },
-        { type: 'image', url: '/src/assets/albums/first date/20240909_121008.jpg', title: '', description: 'We were so happy before the churros came 🙄' },
-        { type: 'image', url: '/src/assets/albums/first date/Snapchat-1123126089.jpg', title: 'Skinnnnn', description: '' },
-        { type: 'image', url: '/src/assets/albums/first date/Snapchat-188329827.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/first date/Snapchat-283777194.jpg', title: 'Veins Popping', description: '' },
-        { type: 'image', url: '/src/assets/albums/first date/Snapchat-690853652.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/first date/Snapchat-871769054.jpg', title: 'This is all you know', description: '' },
+        { type: 'image', url: firstDateImg1, title: 'Our First Date', description: 'Miss these your glasses' },
+        { type: 'image', url: firstDateImg2, title: '', description: 'We were so happy before the churros came 🙄' },
+        { type: 'image', url: firstDateImg3, title: 'Skinnnnn', description: '' },
+        { type: 'image', url: firstDateImg4, title: '', description: '' },
+        { type: 'image', url: firstDateImg5, title: 'Veins Popping', description: '' },
+        { type: 'image', url: firstDateImg6, title: '', description: '' },
+        { type: 'image', url: firstDateImg7, title: 'This is all you know', description: '' },
       ],
     },
     {
       id: 2,
       title: 'Art Gallery Date',
       description: 'Ft. Kanta Wig',
-      cover: '/src/assets/albums/art date/Snapchat-337729128.jpg',
+      cover: artGalleryCover,
       media: [
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1071229453.jpg', title: 'It\'s the lips for me', description: '' },
-        { type: 'video', url: '/src/assets/albums/art date/Snapchat-1173644644.mp4', title: 'By force Video', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1184203243.jpg', title: '👍', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1198843755.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1199493870.jpg', title: '', description: 'We should go here again' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1203038165.jpg', title: 'There was NOTHING on the floor', description: 'Posing with art.' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1211211887.jpg', title: 'Okkkkkkk', description: '👯' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-122066854.jpg', title: '', description: '' },
-        { type: 'video', url: '/src/assets/albums/art date/Snapchat-1223133338.mp4', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1267739832.jpg', title: 'Kanta wig in the wind', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1361525375.jpg', title: 'The art behind the art', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1386991570.jpg', title: 'Our Favorite Pose', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-166754221.jpg', title: '', description: 'I don\'t know what we were trying to do here.' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1755864904.jpg', title: 'Scared Victim Shot', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1762553618.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1767278430.jpg', title: 'Full Vex', description: 'Please don\'t beat me' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-183391550.jpg', title: 'Hm', description: 'Hm' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-184717893.jpg', title: '', description: '' },
-        { type: 'video', url: '/src/assets/albums/art date/Snapchat-617585777.mp4', title: 'Moody Maame', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1889480375.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1981462126.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-1992287904.jpg', title: 'Good Cop Bad Cop', description: 'We all know who the good cop is' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-337729128.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-388811311.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-597037957.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-607715139.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-617538490.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-632865432.jpg', title: '👍', description: '👍' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-704270314.jpg', title: 'Your second best angle', description: '' },
-        { type: 'image', url: '/src/assets/albums/art date/Snapchat-865463239.jpg', title: 'Fin', description: '' },
+        { type: 'image', url: artImg1, title: 'It\'s the lips for me', description: '' },
+        { type: 'video', url: artVid1, title: 'By force Video', description: '' },
+        { type: 'image', url: artImg2, title: '👍', description: '' },
+        { type: 'image', url: artImg3, title: '', description: '' },
+        { type: 'image', url: artImg4, title: '', description: 'We should go here again' },
+        { type: 'image', url: artImg5, title: 'There was NOTHING on the floor', description: 'Posing with art.' },
+        { type: 'image', url: artImg6, title: 'Okkkkkkk', description: '👯' },
+        { type: 'image', url: artImg7, title: '', description: '' },
+        { type: 'video', url: artVid2, title: '', description: '' },
+        { type: 'image', url: artImg8, title: 'Kanta wig in the wind', description: '' },
+        { type: 'image', url: artImg9, title: 'The art behind the art', description: '' },
+        { type: 'image', url: artImg10, title: 'Our Favorite Pose', description: '' },
+        { type: 'image', url: artImg11, title: '', description: 'I don\'t know what we were trying to do here.' },
+        { type: 'image', url: artImg12, title: 'Scared Victim Shot', description: '' },
+        { type: 'image', url: artImg13, title: '', description: '' },
+        { type: 'image', url: artImg14, title: 'Full Vex', description: 'Please don\'t beat me' },
+        { type: 'image', url: artImg15, title: 'Hm', description: 'Hm' },
+        { type: 'image', url: artImg16, title: '', description: '' },
+        { type: 'video', url: artVid3, title: 'Moody Maame', description: '' },
+        { type: 'image', url: artImg17, title: '', description: '' },
+        { type: 'image', url: artImg18, title: '', description: '' },
+        { type: 'image', url: artImg19, title: 'Good Cop Bad Cop', description: 'We all know who the good cop is' },
+        { type: 'image', url: artImg20, title: '', description: '' },
+        { type: 'image', url: artImg21, title: '', description: '' },
+        { type: 'image', url: artImg22, title: '', description: '' },
+        { type: 'image', url: artImg23, title: '', description: '' },
+        { type: 'image', url: artImg24, title: '', description: '' },
+        { type: 'image', url: artImg25, title: '👍', description: '👍' },
+        { type: 'image', url: artImg26, title: 'Your second best angle', description: '' },
+        { type: 'image', url: artImg27, title: 'Fin', description: '' },
       ],
     },
     {
       id: 3,
       title: 'Rooftop Rebels',
       description: 'Our Spot',
-      cover: '/src/assets/albums/rooftop date/20250329_152446.jpg',
+      cover: rooftopCover,
       media: [
-        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_145520.jpg', title: '', description: 'Lowkey one of my favorites' },
-        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_142252.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_152446.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/rooftop date/20250329_152710.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/rooftop date/20250517_163811.jpg', title: 'Epic Fail', description: 'But like i tear o' },
-        { type: 'image', url: '/src/assets/albums/rooftop date/Snapchat-1412665655.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/rooftop date/Snapchat-1565705203.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/rooftop date/Snapchat-1571863218.jpg', title: '', description: '' },
+        { type: 'image', url: rooftopImg1, title: '', description: 'Lowkey one of my favorites' },
+        { type: 'image', url: rooftopImg2, title: '', description: '' },
+        { type: 'image', url: rooftopImg3, title: '', description: '' },
+        { type: 'image', url: rooftopImg4, title: '', description: '' },
+        { type: 'image', url: rooftopImg5, title: 'Epic Fail', description: 'But like i tear o' },
+        { type: 'image', url: rooftopImg6, title: '', description: '' },
+        { type: 'image', url: rooftopImg7, title: '', description: '' },
+        { type: 'image', url: rooftopImg8, title: '', description: '' },
       ],
     },
     {
       id: 4,
       title: 'Randoms',
       description: 'Random moments and memories',
-      cover: '/src/assets/albums/randoms/Snapchat-2012772674.jpg',
+      cover: randomsCover,
       media: [
         { type: 'image', url: '/src/assets/albums/randoms/20250214_171922.jpg', title: '"Beautiful"', description: '' },
         { type: 'image', url: '/src/assets/albums/randoms/20250214_172017.jpg', title: '', description: '' },
