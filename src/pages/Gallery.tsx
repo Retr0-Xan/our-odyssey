@@ -58,6 +58,21 @@ import rooftopImg8 from '../assets/albums/rooftop date/Snapchat-1571863218.jpg';
 
 // Randoms
 import randomsCover from '../assets/albums/randoms/Snapchat-2012772674.jpg';
+import rnd_20250214_171922 from '../assets/albums/randoms/20250214_171922.jpg';
+import rnd_20250214_172017 from '../assets/albums/randoms/20250214_172017.jpg';
+import rnd_vid_103123124 from '../assets/albums/randoms/Snapchat-103123124.mp4';
+import rnd_1037530612 from '../assets/albums/randoms/Snapchat-1037530612.jpg';
+import rnd_1941345676 from '../assets/albums/randoms/Snapchat-1941345676.jpg';
+import rnd_1967554179 from '../assets/albums/randoms/Snapchat-1967554179.jpg';
+import rnd_1976865519 from '../assets/albums/randoms/Snapchat-1976865519.jpg';
+// randomsCover already imported for Snapchat-2012772674.jpg
+import rnd_vid_2017212395 from '../assets/albums/randoms/Snapchat-2017212395.mp4';
+import rnd_2048073210 from '../assets/albums/randoms/Snapchat-2048073210.jpg';
+import rnd_312219279 from '../assets/albums/randoms/Snapchat-312219279.jpg';
+import rnd_337366375 from '../assets/albums/randoms/Snapchat-337366375.jpg';
+import rnd_75640906 from '../assets/albums/randoms/Snapchat-75640906.jpg';
+import rnd_79750910 from '../assets/albums/randoms/Snapchat-79750910.jpg';
+import rnd_916854534 from '../assets/albums/randoms/Snapchat-916854534.jpg';
 
 const Gallery = () => {
   // Album structure: cover, title, description, media[]
@@ -137,21 +152,21 @@ const Gallery = () => {
       description: 'Random moments and memories',
       cover: randomsCover,
       media: [
-        { type: 'image', url: '/src/assets/albums/randoms/20250214_171922.jpg', title: '"Beautiful"', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/20250214_172017.jpg', title: '', description: '' },
-        { type: 'video', url: '/src/assets/albums/randoms/Snapchat-103123124.mp4', title: 'Passenger Princess', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1037530612.jpg', title: 'Birthday Princess', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1941345676.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1967554179.jpg', title: 'Cute', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-1976865519.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-2012772674.jpg', title: '', description: '' },
-        { type: 'video', url: '/src/assets/albums/randoms/Snapchat-2017212395.mp4', title: '', description: 'I\'m very serious' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-2048073210.jpg', title: 'First art Session', description: 'Mine is the nicer fish' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-312219279.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-337366375.jpg', title: '', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-75640906.jpg', title: 'Greet The World with Open Arms', description: '' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-79750910.jpg', title: 'Hm', description: 'Catfish' },
-        { type: 'image', url: '/src/assets/albums/randoms/Snapchat-916854534.jpg', title: '', description: '' },
+  { type: 'image', url: rnd_20250214_171922, title: '"Beautiful"', description: '' },
+  { type: 'image', url: rnd_20250214_172017, title: '', description: '' },
+  { type: 'video', url: rnd_vid_103123124, title: 'Passenger Princess', description: '' },
+  { type: 'image', url: rnd_1037530612, title: 'Birthday Princess', description: '' },
+  { type: 'image', url: rnd_1941345676, title: '', description: '' },
+  { type: 'image', url: rnd_1967554179, title: 'Cute', description: '' },
+  { type: 'image', url: rnd_1976865519, title: '', description: '' },
+  { type: 'image', url: randomsCover, title: '', description: '' },
+  { type: 'video', url: rnd_vid_2017212395, title: '', description: 'I\'m very serious' },
+  { type: 'image', url: rnd_2048073210, title: 'First art Session', description: 'Mine is the nicer fish' },
+  { type: 'image', url: rnd_312219279, title: '', description: '' },
+  { type: 'image', url: rnd_337366375, title: '', description: '' },
+  { type: 'image', url: rnd_75640906, title: 'Greet The World with Open Arms', description: '' },
+  { type: 'image', url: rnd_79750910, title: 'Hm', description: 'Catfish' },
+  { type: 'image', url: rnd_916854534, title: '', description: '' },
       ],
     },
   ];
