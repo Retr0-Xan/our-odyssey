@@ -86,7 +86,7 @@ const Home = () => {
             transition={{ delay: 1.8, duration: 0.8 }}
             className="text-2xl md:text-3xl script text-yellow-100 mb-16 leading-relaxed"
           >
-            To my beautiful Princess, my heart's eternal flame.
+            To my Penelope, my heart's eternal flame.
           </motion.p>
 
           <motion.div
@@ -225,13 +225,12 @@ const Home = () => {
                 </h2>
                 <div className="w-24 h-px bg-yellow-600 mb-8"></div>
                 <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                  This is more than just a website—it's a digital sanctuary where our love story lives,
-                  breathes, and grows. Every page holds a piece of our journey, every interaction a memory,
-                  every moment a testament to what we've built together.
+                  A digital sanctuary where our love story lives,
+                  breathes, and grows. a space just for us,
+                   a testament to what we've built together and everything we are yet to build.
                 </p>
                 <p className="text-lg text-gray-500 leading-relaxed">
-                  Navigate through our timeline, relive our adventures, test your knowledge of our story,
-                  and discover the hidden treasures scattered throughout these pages.
+                  Happy Anniversary Maame Akua!
                 </p>
               </motion.div>
 
@@ -306,6 +305,10 @@ const Home = () => {
           </div>
         </motion.section>
       </div>
+      {/* Footer at the very end of the page */}
+      <footer className="w-full bg-gray-900 py-4 border-t border-gray-800 text-center">
+        <span className="text-s italic text-white tracking-wide leading-tight" style={{ lineHeight: '1.1' }}>"I love you because the entire universe conspired to help me find you."{/* <span className="ml-2 text-xs text-white">— Paulo Coelho, The Alchemist</span> */}</span>
+      </footer>
     </motion.div>
   );
 };
